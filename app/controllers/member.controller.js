@@ -20,6 +20,12 @@ exports.findAdmins = (req, res) => {
     service.findAdmins(req, res)
 };
 
+// Find Members has birtday in current month
+exports.findBirthday = (req, res) => {
+    service.findBirthday(req, res)
+};
+
+
 // Update a Member by the id in the request
 exports.update = (req, res) => {
   

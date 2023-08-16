@@ -12,6 +12,9 @@ module.exports = app => {
     // Retrieve all admin members
     router.get("/admins", members.findAdmins);
   
+    // Retrieve all members has birthday in current month
+    router.get("/birthday", members.findBirthday);
+  
     // Retrieve a single member with id
     router.get("/:id", members.findOne);
   
