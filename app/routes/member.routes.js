@@ -1,31 +1,31 @@
 module.exports = app => {
-    const members = require("../controllers/member.controller.js");
+    const controller = require("../controllers/member.controller.js");
   
     var router = require("express").Router();
   
     // Create a new member
-    router.post("/", members.create);
+    router.post("/", controller.create);
   
     // Retrieve all members
-    router.get("/", members.findAll);
+    router.get("/", controller.findAll);
   
     // Retrieve all admin members
-    router.get("/admins", members.findAdmins);
+    router.get("/admins", controller.findAdmins);
   
     // Retrieve all members has birthday in current month
-    router.get("/birthday", members.findBirthday);
+    router.get("/birthday", controller.findBirthday);
   
     // Retrieve a single member with id
-    router.get("/:id", members.findOne);
+    router.get("/:id", controller.findOne);
   
     // Update a member with id
-    router.put("/:id", members.update);
+    router.put("/:id", controller.update);
   
     // Delete a member with id
-    router.delete("/:id", members.delete);
+    router.delete("/:id", controller.delete);
   
     // Create a new member
-    router.delete("/", members.deleteAll);
+    router.delete("/", controller.deleteAll);
   
     app.use('/api/members', router);
   };

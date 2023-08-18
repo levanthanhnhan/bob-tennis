@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
 require("./app/routes/member.routes")(app);
+require("./app/routes/fund.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
