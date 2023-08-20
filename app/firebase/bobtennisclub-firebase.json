@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bobtennisclub",
+  "private_key_id": "e56eebe58f30b4327018545ddbaeffa44dfcaaf7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDXszn8XIX1Cfju\npuxEkdLIyzIDZeIYP29pdNYaZ6BOCoJ6WIb9ECNvO4xkpW5zd1gRf8YejRp6Ae+J\nIgk0uUQ5Ms90gjQ3TprtdXtAwUXXUN3uIICzLfY7OhIYOBnzHgivNEQpCGPGHpv4\n0Z9TE9RJjcJ6mCoL54CDXxRx3evybigSJOfm++yxjZjFZ9yOdlVvZ7K4umqdzHE3\nXhxJnpz2jJyjkJdFu9Yyfuqw09GgWzqaFrxP3Nstq7VPrwPdgnIq50A6fKTOiv7e\nmX//j5QJ0b4JUGel1T1yErpvlnt+unJCA0Gih07BorOnflRDn0+8tPic6a0Xjd0L\nr2TT+dttAgMBAAECggEAGevWK1NkHsEqyuVA7fGXQt2WXk2rWM4gwavSgfxTiaVe\nLj0+xaEfnQGrOrodtp8QNJQmFyxOUvyyEEkIka80+Wm3gBEYnM/jsuckH3FKhxhW\n/0OlK8M5fL8bBxGQ3sRMd1+g1EyHjvrFNCbeznFK2OcCCNEJ9oHE0iTGNHPeo7Ss\nHrafbiPnY9vP1I184rnNotZvHp+Lus++ok2J3pypcKmfntf+ebKMtZVxHcTj4KDC\nZSuDNXU69510QoiFyiMDBih3FcN8IjSMMlW6g3ak3kKCvZsTXfBoQrigYupef3dw\nod0H9MuTpjGDaj382TMv6zabx1lqp1xk4jcGhYtmIQKBgQD69ESdl7bdwgubCpTd\njzYdVHh827ZlBYHLoSYK2IPVrYqLH3GTwi4kQ/1p55GC/veCOTY/Fx162EgwyWtE\nJwvYGRDH5ap4dpdVoaorSRk7Ah5zr8YbalJ7Vbi23ZjUjYsqK+tPcuJ1ERtgGCja\nykPNmXIaiADtq+89ASnEew1coQKBgQDcCX7vAMzjD8+fcAlWirsqQv6N2A2n/E9Q\nI12dHkwo5RHjmqSt9HVPspxcoDSHSSiofnWVrKVC1yaPFLERg52s8Pvd+YM6/SsD\nC2qLoa2vQqsGq8A9jlk8JWAY07tQA2XF0kh7TBOUdB8H9iqGSHHTwriPRmpzOFNP\nxmUQqE2fTQKBgFDkTf3SepKOyvjl90hXsmTP5qqwk+GKXeVKg525Xv2Qm/juYMj1\nLbRo6hWqHEByeUvTr0W06L7BWrvHITltsKaupbcZs9Jyv6NNojGjtWtM6o312dDa\ne83futPPKEVTfslQMOCCMrbzlbRq9ThZPHPYg2xD7LCv3ET4zALWe18hAoGASgBj\nkUwKnD7gC/YpHdLwmYkIhXnpNdr0bbZHMKVU5dgMiSikQ+DYZ2JhlgFHSUyAgRJu\nx1TWC8HCNRK3bnV+XQB7JK9axEcK5S48uhM5D51zWX3/3HP4bPMA+7iR4ZoS61IK\nkHUIjL/1A791k83fgmGVopIDERcbZdQKf2yrFm0CgYBK2g3XA6TckGX6mguOht79\nnjON6fIYi49AcsRa4C7CtgmbDSpwDv473vD5TnOh49Sn36xmgfBlUF2+6I1OBxc0\nV3gdlSKrmTt9HnshV7qTS3RpLpCFezOB423S4KoHRmbpYscpJtGWgXHOXmVJ/hg4\n3xO42bYLw68VM25YnqH40w==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-uxnmh@bobtennisclub.iam.gserviceaccount.com",
+  "client_id": "112586090416803633562",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-uxnmh%40bobtennisclub.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
