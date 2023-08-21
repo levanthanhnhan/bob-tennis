@@ -43,5 +43,5 @@ const findAdmins = (request, response) => {
 module.exports = {
     findAll,
     findAdmins,
-    findBirthday
+    findBirthday,
 }

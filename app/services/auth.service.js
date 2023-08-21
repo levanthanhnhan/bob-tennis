@@ -1,17 +1,19 @@
-const pool = require("./auth.service.js")
-const firebase = require('../../node_modules/firebase-admin');
-const auth = firebase.auth();
+const pool = require("../services/db.service.js")
 
-const signInWithPhoneNumber = (request, response) => {
-    var phoneNumber = req.body.phoneNumber
-    var verificationCode = req.body.verificationCode
-}
-
-const verificationCode = (req, res) => {
-    var phoneNumber = req.body.phoneNumber
+const findByPhoneNumber = (request, response) => {
+    var phoneNumber = request.body.phoneNumber
+    pool.query(
+        'SELECT COUNT(m.member_id) ' +
+        'FROM members AS m ' +
+        "WHERE m.phone_number like '%" + phoneNumber + "%'" +
+        '', (error, results) => {
+        if (error) {
+            throw error
+        }
+        response.status(200).json(results.rows)
+    })
 }
 
 module.exports = {
-    signInWithPhoneNumber,
-    verificationCode,
+    findByPhoneNumber,
 }
