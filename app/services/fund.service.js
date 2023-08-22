@@ -1,4 +1,4 @@
-const pool = require("./db.service.js")
+const pool = require("./db.service.js");
 
 const findFundMember = (request, response) => {
     pool.query(

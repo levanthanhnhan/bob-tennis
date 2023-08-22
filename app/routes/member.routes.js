@@ -1,6 +1,9 @@
 module.exports = app => {
     const controller = require("../controllers/member.controller.js");
-  
+    const multer = require('multer')
+    const upload = multer({
+        storage: multer.memoryStorage()
+    })
     var router = require("express").Router();
   
     // Create a new member
@@ -26,6 +29,12 @@ module.exports = app => {
   
     // Create a new member
     router.delete("/", controller.deleteAll);
+
+    // Upload avatar
+    router.post("/uploadAvatar", upload.single("filename"), controller.uploadAvatar);
+
+    // Update member
+    router.post("/update", controller.update);
   
     app.use('/api/members', router);
   };

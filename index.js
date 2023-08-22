@@ -2,8 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const middleware = require("./app/firebase/middleware");
-
-
 const app = express();
 
 var corsOptions = {
@@ -21,10 +19,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
-app.use("/api", middleware);
+//app.use("/api", middleware);
 require("./app/routes/member.routes")(app);
 require("./app/routes/fund.routes")(app);
 require("./app/routes/auth.routes")(app);
+require("./app/routes/role.routes")(app);
+require("./app/routes/level.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

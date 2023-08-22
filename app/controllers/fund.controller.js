@@ -5,7 +5,6 @@ exports.findFundMember = (req, res) => {
     service.findFundMember(req, res)
 };
 
-
 // Webhook PayOS
 exports.webhook = (req, res) => {
     console.log('Time: ' + new Date())

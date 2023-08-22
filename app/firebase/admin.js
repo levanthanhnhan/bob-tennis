@@ -1,5 +1,4 @@
 const firebase = require("firebase-admin");
-
 const credentials = require("./bobtennisclub-firebase.json");
 
 firebase.initializeApp({
