@@ -8,4 +8,14 @@ const pool = new Pool({
   password: dbConfig.PASSWORD,
 })
 
-module.exports = pool;
+function handleError(res, error) {
+  console.log(error.message);
+  res.status(500).json(error.message);
+}
+
+const db = {
+  pool: pool,
+  error: handleError
+}
+
+module.exports = db;

@@ -48,3 +48,8 @@ exports.findRoles = (req, res) => {
 exports.findLevels = (req, res) => {
   service.findLevels(req, res);
 };
+
+// Find member has phone number
+exports.findByPhoneNumber = (req, res) => {
+  service.findByPhoneNumber(req, res)
+};

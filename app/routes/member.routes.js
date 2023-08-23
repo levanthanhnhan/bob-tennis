@@ -36,5 +36,8 @@ module.exports = app => {
     // Update member
     router.post("/update", controller.update);
   
+    // Retrieve member has phone number
+    router.post("/phoneNumber", controller.findByPhoneNumber);
+  
     app.use('/api/members', router);
   };

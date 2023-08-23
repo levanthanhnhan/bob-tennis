@@ -1,10 +1,11 @@
-const pool = require("./db.service.js");
+const db = require("./db.service.js");
 
 const findAll = (request, response) => {
-    pool.query(
+    db.pool.query(
         'SELECT * FROM role ORDER BY role_id ASC', (error, results) => {
         if (error) {
-            throw error
+            db.error(response, error);
+            return;
         }
         response.status(200).json(results.rows)
     })
