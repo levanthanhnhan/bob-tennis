@@ -207,3 +207,17 @@ ALTER TABLE ONLY public.role
 -- PostgreSQL database dump complete
 --
 
+
+CREATE TABLE IF NOT EXISTS public.billing
+(
+    order_code integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    amount integer NOT NULL,
+    description character varying COLLATE pg_catalog."default" NOT NULL,
+    cancel_url character varying COLLATE pg_catalog."default" NOT NULL,
+    return_url character varying COLLATE pg_catalog."default" NOT NULL,
+    member_id bigint NOT NULL,
+    year integer NOT NULL,
+    quarter integer NOT NULL,
+    payment_id character varying COLLATE pg_catalog."default",
+    CONSTRAINT billing_pkey PRIMARY KEY (order_code)
+)
