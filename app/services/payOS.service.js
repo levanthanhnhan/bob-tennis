@@ -1,4 +1,3 @@
-const db = require("./db.service.js");
 const axios = require("axios");
 const CryptoJS = require("crypto-js");
 
@@ -14,22 +13,16 @@ const http = axios.create({
 const createOrder = async (data) => {
   var dataPayOS = createOrderData(data);
 
-  var checkoutUrl = await http
+  var res = await http
     .post("/", JSON.stringify(dataPayOS))
     .then((response) => {
-      if (response.data.code == "00") {
-        // Save order to db
-        insertOrder(data, response.data.data);
-
-        return response.data.data.checkoutUrl;
-      }
-      return null;
+      return response.data;
     })
     .catch((e) => {
       return null;
     });
 
-  return checkoutUrl;
+  return res;
 };
 
 const createSignature = (orderCode) => {
@@ -80,30 +73,6 @@ const createOrderData = (data) => {
   };
 
   return res;
-};
-
-const insertOrder = (data, dataPayOS) => {
-  db.pool.query(
-    "INSERT INTO billing( " +
-      "amount, description, cancel_url, return_url, member_id, year, quarter, payment_id) " +
-      "VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
-    [
-      dataPayOS.amount,
-      dataPayOS.description,
-      process.env.PAYOS_CANCEL_URL,
-      process.env.PAYOS_RETURN_URL,
-      data.memberId,
-      data.year,
-      data.quarter,
-      dataPayOS.paymentLinkId,
-    ],
-    (error, results) => {
-      if (error) {
-        console.log(error.message);
-      }
-      console.log("Save billing success: " + results.rowCount);
-    }
-  );
 };
 
 module.exports = {
