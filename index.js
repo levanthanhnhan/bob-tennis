@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // routes
-//app.use("/api", middleware);
+app.use("/api", middleware);
 require("./app/routes/payos.routes")(app);
 require("./app/routes/member.routes")(app);
 require("./app/routes/fund.routes")(app);
