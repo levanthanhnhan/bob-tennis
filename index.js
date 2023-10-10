@@ -28,6 +28,8 @@ require("./app/routes/auth.routes")(app);
 require("./app/routes/role.routes")(app);
 require("./app/routes/level.routes")(app);
 require("./app/routes/billing.routes")(app);
+require("./app/routes/receipt.routes")(app);
+require("./app/routes/payment.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
